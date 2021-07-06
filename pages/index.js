@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -39,7 +40,26 @@ export default function Home() {
             <h2>Examples &rarr;</h2>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
-
+          <Link href="/path">
+            <a
+              className={styles.card}
+            >
+              <h2>/path</h2>
+              <p>
+                go to /path
+              </p>
+            </a>
+          </Link>
+          <Link href="/server-rendered/1">
+            <a
+              className={styles.card}
+            >
+              <h2>/server-rendered/1</h2>
+              <p>
+                go to SSR generated-page
+              </p>
+            </a>
+          </Link>
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
